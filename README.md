@@ -11,6 +11,9 @@ New Linux command - internsctl
 ## Version
 
 Current version: v0.1.0
+
+
+
 ![image](https://github.com/SUKHJIT-CYBER/project_xenon_stack_task1/assets/78156807/0687e2db-62b4-4fae-9ae8-cf50ce913d4a)
 
 ## Table of Contents
@@ -24,11 +27,11 @@ Current version: v0.1.0
 
 ## Installation
 
-Clone the repository and run the following commands:
 
 ```bash
 chmod +x internsctl.sh
-sudo ln -s "$(pwd)/internsctl.sh" /usr/local/bin/internsctl
+sudo mv internsctl.sh /usr/local/bin/
+sudo cp internsctl.1 /usr/share/local/man/man1/
 ```
 
 Usage
@@ -37,6 +40,7 @@ Usage
 internsctl [OPTIONS] [COMMAND] [ARGUMENTS]
 Commands
 cpu: Display CPU information
+```
 
 ![image](https://github.com/SUKHJIT-CYBER/project_xenon_stack_task1/assets/78156807/45205bb8-47af-4574-b17d-6bb82340b032)
 
@@ -72,50 +76,52 @@ Display detailed CPU information:
 
 internsctl cpu getinfo
 Display memory information:
+```
 
 ```bash
 
 internsctl memory getinfo
+```
 Create a new user:
 
 ```bash
 
-internsctl user create <username>
+internsctl user create <username>```
 List all users:
 
 ```bash
 
-internsctl user list
+internsctl user list```
 List sudo users only:
 
 ```bash
 
-internsctl user list --sudo-only
+internsctl user list --sudo-only```
 Display information about a file:
 
 ```bash
 
-internsctl file getinfo /path/to/file.txt
+internsctl file getinfo /path/to/file.txt```
 Display only the size of a file:
 
 ```bash
 
-internsctl file getinfo --size /path/to/file.txt
+internsctl file getinfo --size /path/to/file.txt```
 Display only the permissions of a file:
 
 ```bash
 
-internsctl file getinfo --permissions /path/to/file.txt
+internsctl file getinfo --permissions /path/to/file.txt ```
 Display only the owner of a file:
 
 ```bash
 
-internsctl file getinfo --owner /path/to/file.txt
+internsctl file getinfo --owner /path/to/file.txt```
 Display only the last modified time of a file:
 
 ```bash
 
-internsctl file getinfo --last-modified /path/to/file.txt
+internsctl file getinfo --last-modified /path/to/file.txt```
 Display file information with multiple options:
 
 ```bash
@@ -123,7 +129,7 @@ Display file information with multiple options:
 internsctl file getinfo --size --permissions --last-modified /path/to/file.txt
 List sudo users and create a new user in one command:
 
-```bash
+```
 
  Usage Examples :
 
