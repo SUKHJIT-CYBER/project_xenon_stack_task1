@@ -1,0 +1,107 @@
+.TH INTERNSTCTL 1 "December 2023" "v0.1.0" "internsctl - Custom Linux command for operations"
+
+.SH COWSAY
+.PP
+.BR cowsay " sukhjit-singh"
+
+
+.SH NAME
+internsctl \- Custom Linux command for various operations
+
+.SH SYNOPSIS
+.B internsctl
+[\fIOPTIONS\fR] [\fICOMMAND\fR] [\fIARGUMENTS\fR]
+
+.SH DESCRIPTION
+.B internsctl
+is a custom Linux command designed for various system operations. It provides functionalities related to CPU information, memory information, user management, and file operations.
+
+.SH OPTIONS
+.TP
+.BR --help
+Display the help message.
+
+.TP
+.BR --version
+Display the version of internsctl.
+
+.SH COMMANDS
+.PP
+The following commands are supported:
+
+.TP
+.BR cpu " getinfo"
+Display detailed CPU information.
+
+.TP
+.BR memory " getinfo"
+Display detailed memory information.
+
+.TP
+.BR user " create \fI<username>\fR"
+Create a new user with the specified username.
+
+.TP
+.BR user " list [\fI--sudo-only\fR]"
+List all users or sudo users only.
+
+.TP
+.BR file " getinfo [\fIOPTIONS\fR] \fI<file-name>\fR"
+Display detailed information about a file.
+
+.SH FILE COMMAND OPTIONS
+.PP
+When using the \fBfile getinfo\fR command, the following options are available:
+
+.TP
+.BR --size, -s
+Print the size of the file.
+
+.TP
+.BR --permissions, -p
+Print the file permissions.
+
+.TP
+.BR --owner, -o
+Print the file owner.
+
+.TP
+.BR --last-modified, -m
+Print the last modified time of the file.
+
+.SH EXAMPLES
+.PP
+Display detailed CPU information:
+.BR internsctl cpu getinfo
+
+.PP
+Create a new user:
+.BR internsctl user create \fI<username>\fR
+
+.PP
+Display information about a file:
+.BR internsctl file getinfo \fI<file-name>\fR
+
+.PP
+Display only the size of a file:
+.BR internsctl file getinfo \fI--size \fR \fI<file-name>\fR
+
+.SH AUTHOR
+Sukhjit Singh
+
+
+
+.SH SEE ALSO
+.BR man (1), lscpu (1), free (1), stat (1), getent (1), awk (1), sudo (8), grep (1)
+
+.SH BUGS
+Report bugs to sukhjitminhas753159@gmail.com
+
+.SH COPYRIGHT
+Copyright © 2023 Sukhjit Singh. This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.
+
+.SH NOTES
+This manual page was written for the internsctl command version v0.1.0.
+
+.SH AVAILABILITY
+The latest version of internsctl can be found at https://github.com/sukhjit-singh/internsctl
