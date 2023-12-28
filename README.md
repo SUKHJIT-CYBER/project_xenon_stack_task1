@@ -29,6 +29,8 @@ Clone the repository and run the following commands:
 ```bash
 chmod +x internsctl.sh
 sudo ln -s "$(pwd)/internsctl.sh" /usr/local/bin/internsctl
+```
+
 Usage
 ```bash
 
